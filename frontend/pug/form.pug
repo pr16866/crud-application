@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Form Validation
+  link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/form.css')
+h2 Enter employ details
+br
+.form
+  form(action='/form' method="post" onsubmit='return validation()')
+    .name
+      | Name
+      input#name(type='text' name ="name" placeholder='Enter your name')
+      i#i1.fa.fa-exclamation-circle
+      i#i2.fa.fa-check-circle
+      span#spn1
+    .email
+      | email
+      input#email(type='email' name ="email" placeholder='Employ email')
+      span#spn2
+      i#i3.fa.fa-exclamation-circle
+      i#i4.fa.fa-check-circle
+    .phn
+      | Phone
+      input#phn(type='number' name ="phone" placeholder='Employ phone')
+      span#spn3
+      i#i5.fa.fa-exclamation-circle
+      i#i6.fa.fa-check-circle
+    .city
+      | state
+      input(type='text' name='state' placeholder='Employ state')
+      span#spn4
+      i#i7.fa.fa-exclamation-circle
+      i#i8.fa.fa-check-circle
+    .gender
+      | Male 
+      input(type='radio' name='gender' value='male')
+      |                Female
+      input(type='radio' name='gender' value='female')
+      |                Other
+      input(type='radio' name='gender' value='other')
+    span#spn5
+    .btn
+      input#btn(type='submit' value='submit')
+    br
+script(src='./form.js')

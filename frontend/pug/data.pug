@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='/data.css')
+  link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
+  title Employ Data
+.container
+  .heading
+    h1.animate__animated.animate__heartBeat.animate__infinite Employ Data
+    a(href='/form')
+      i.fa.fa-user-plus
+      | Add Employ
+  table
+    tr#nav
+      th Name
+      th Email
+      th Phone
+      th State
+      th Gender
+    each data in fdata    
+      tr.employ-data
+         td= data.name
+         td= data.email
+         td= data.phone
+         td= data.state
+         td= data.gender
+         td.button
+           button
+             a(href='/delete/?id='+data._id) Button
